@@ -1,35 +1,167 @@
-<!DOCTYPE html>
-<html>
-		  <head>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width">
-			<meta name="description" content="Welcome to Boston">
-			  <meta name="keywords" content="Small town, big personality">
-			<title>Boston Lincolnshire</title>
-			<link rel="stylesheet" href="./css/style.css">
-		  </head>
-				  <body>
-					<header>
-					  <div class="container">
-						<div id="branding">
-						  <h1><span class="highlight">Visit</span> Boston Lincolnshire</h1>
-						</div>
-						<nav>
-						  <ul>
-							<li class="current"><a href="index.html">Home</a></li>
-							<li><a href="findus.html">Find Us</a></li>
-							<li><a href=".html">Restaurants</a></li>
-							<li><a href=".html">Tourism</a></li>
-						  </ul>
-						</nav>
-					  </div>
-					</header>
+<!-- js nav bar, js image slider, json weather updater on page refresh of index.php -->
 
-					<section id="showcase">
-					  <div class="container">
-						<h1>Boston Lincolnshire</h1>
-						<p>Small town, big personality</p>
-					  </div>
-					</section>
-				  </body>
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Boston Lincolnshire</title>
+			<link href="css/jquery.bxslider.css" rel="stylesheet" />
+			<link href="style.css" rel="stylesheet">
+			<link href="css/font-awesome.min.css" rel="stylesheet"/>
+			<link rel="shortcut icon" type="image/png" href="img/stump.jpg"/> <!--- 30px x 30px -->
+		</head>
+	<body>
+	<!--- Start Wrapper -->
+		<div id="wrapper">
+	<!--- Start Header -->
+			<header>
+			<div id="logo">
+				<a href="index.html"><img src="img/title.png" title=""/></a>
+			</div>
+		</header>
+<!--- End Header -->
+	<div class="clearfix"></div>
+<!--- Sart Banner Wrapper -->
+		<div id="banner-wrapper">
+<!--- Start Navigation -->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/main.js"></script> <!--- For Navigation -->
+		<div class="nav-wrap">
+			<div class="menu-toggle-wrap">
+				<span class="toggle-menu"><i class="fa fa-navicon"></i></span>
+			</div>
+			<nav class="navigation">
+				<div class='nav' nav-menu-style="yoga">
+					<ul class="nav-menu">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about-us.html">About</a></li>
+						<li><a href="restaurants.html">Restaurants</a>
+						<li><a href="activities.html">Activities</a></li> 
+					</ul>
+				</div>
+			</nav>
+		</div>
+<!--- End Navigation -->
+			<!--- image slider -->
+		<script src="js/jquery.bxslider.min.js"></script><!--For Image Slider-->
+		<div class="slide-wrap">
+			<section class="slider">
+				<ul class="slider1">
+					<!-- Image 1 reference: http://www.trekearth.com/gallery/Europe/United_Kingdom/England/Lincolnshire/Boston/photo1477453.htm -->
+					<!-- Image 2 reference: https://content.historicengland.org.uk/remote/content.historicengland.org.uk/content/publications/galleries/boston/boston-gallery-image-09.jpg -->
+					<!-- Image 3 reference: https://parish-of-boston.org.uk/wp-content/uploads/2015/11/st-botolphs.jpg -->
+					<li><img src="img/stumpslider3.jpg" title="stump image 1" /></li> <!-- 1200x510 sizes --> 
+					<li><img src="img/stumpslider2.jpg" title="" /></li>
+					<li><img src="img/stumpslider1.jpg" title="" /></li>
+				</ul>
+			</section>
+		</div>			
+		<script type="text/javascript">
+			$('.slider1').bxSlider({
+				mode: 'fade',
+				captions: false,
+				auto:true,
+				pager:false,
+				
+			});
+			$('.slider2').bxSlider({
+				pager:false,
+				captions: true,
+				maxSlides: 3,
+				minSlides: 1,
+				slideWidth: 230,
+				slideMargin: 10
+			});
+			$('.slider3').bxSlider({
+				mode: 'fade',
+				captions: false,
+				auto:true,
+				pager:false,
+				controls:false,
+			});
+		</script>
+			<!--- End Slider -->
+		</div>
+	<!--- End Banner Wrapper -->	
+<!--- End Icon, Title, Text -->
+	<div class="clearfix"></div>
+<!--- Start Heading, Text, Image -->
+		<h2 class="welcome">Welcome to Boston</h2>
+		<section class="left-col">
+			<p>Homed to one of the largest ever parish Churches, the "Stump" is plotted in the centre of the town. Surrounded by shops and tearooms, its easily accessible and neighboured to the weekly stalls bringing in goods from around the country.</p>
+			<p>Expansion is key to Bostons thriving Business, a new "Mini" shopping mall opened a stones throw away from the church providing shoppers ample stores to get what they need. The town is situated between many travel sites such as Skegness and Hunstanton only 30minutes away! making this a key area to stop and have a look around.</p>
+		
+		</section>
+		<section class="sidebar">
+			<img src="img/bostoncentre1.jpg" title=""/>
+		</section>
+<!--- End Heading, Text, Image -->
+	<div class="clearfix"></div>
+<!--- Start Title, Image, Text -->
+		<section class="one-third">
+			<h3>Bubble Car Museum</h3>
+			<img src="img/bubblecar.jpg" title=""/>
+			<p>Visit the Bubble car museum located just outside of Boston. Home to some of the rarest bubble cars from the early 50's/60's.</p>
+		</section>
+		<section class="one-third">
+			<h3>Eat out?</h3>
+			<img src="img/restaurant1.jpg" title=""/>
+			<p> Local treats available from the traditional "tates chip shop" along with a host of exquisite restaurants and diners.</p>
+		</section>
+		<section class="one-third">
+			<h3> Witham Cruise </h3>
+			<img src="img/bostonboat1.jpg" title=""/>
+			<p> Relax on the River Witham boat tour, getting up close to the town but from a different perspective and at a low price. </p>
+		</section>
+<!--- End Title, Image, Text -->
+	<div class="clearfix"></div>
+<!--- Start Footer -->
+		<footer>
+			<section class="one-third">
+				<h3>More Info</h3>
+				</br>
+				<b class="phone">Visit Facebook and trip advisor for more information and suggestions</b><br></br>
+				</br>
+				<ul class="social">
+					<li><a href="https://www.facebook.com/places/Things-to-do-in-Boston-Lincolnshire-United-Kingdom/106646729369602/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</section>
+			<section class="one-third">
+				<h3>Find us here</h3>
+					</br>
+				<div class="google-maps">			
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76874.74532647865!2d-0.09145079699554758!3d52.97836207050569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d7c2c53856f733%3A0x8406d541f1a0910c!2sBoston!5e0!3m2!1sen!2suk!4v1489062894705" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</section>
+			<section class="one-third">
+				<h3>Come Visit</h3>
+					</br>
+				<p>We are small yet independant with a large docks, markets weekly and a host of shops and restaurants. The town is always expanding and growing and situated inside are some local gems such as the UK's leading motorcyle store <a href="https://www.sportsbikeshop.co.uk/">Sportsbikeshop</a></p>
+			</section>
+		</footer>
+<!--- End Footer -->
+		<p>&copy; Boston Lincs.</p>
+		<div id="weather">
+			<script src="weather.js" type ="text/javascript"></script>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<!-- Current Weather small json pop up -->
+					<script>
+					jQuery(document).ready(function($) {
+					  $.ajax({
+					  url : "http://api.wunderground.com/api/60c53164c6d2ad38/geolookup/conditions/q/UK/Boston.json",
+					  dataType : "jsonp",
+					  success : function(parsed_json) {
+					  var location = parsed_json['location']['city'];
+					  var temp_f = parsed_json['current_observation']['temp_f'];
+					  alert("Current temperature in " + location + " is: " + temp_f);
+					  }
+					  });
+					});
+					</script>
+	</div>
+<!--- End Wrapper -->
+	</body>
 </html>
